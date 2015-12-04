@@ -23,6 +23,7 @@ locales: [en]
 # The TimeZone class from Rail's ActiveSupport is used to interpret the string
 # Sample timezone strings: Tokyo, Beijing, Moscow, Cairo, Paris, Pacific Time (US & Canada)
 # timezone: Paris
+timezone: "Central Time (US & Canada)"
 
 # For SEO purposes, sites may wish to add a relevant string to the <title> tag
 # And include <meta type="keywords"> and <meta type="description">
