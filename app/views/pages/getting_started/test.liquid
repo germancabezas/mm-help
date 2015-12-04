@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Test
 
 # true if the page is included in the menu
 listed: true
@@ -26,13 +26,13 @@ published: true
 
 {% block main %}
 
-  <p>Getting Started</p>
-  <div id="side-nav">
+  <p>test</p>
+    <div id="side-nav">
     <ul>
       <!-- <li {% if page.slug == "index" %}class="active"{% endif %}>
         <a href="/">Home</a>
       </li> -->
-      {% nav 'page', depth: 1, no_wrapper: false, exclude: nil, icon: false %}
+      {% nav 'parent', depth: 1, no_wrapper: false, exclude: nil, icon: false %}
     </ul>
   </div>
 
