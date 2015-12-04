@@ -17,3 +17,59 @@ Found page "Home page" [index]
 [0;32;49mCompleted 200 OK in 2.6ms
 
 [0m
+<<<<<<< Updated upstream
+=======
+Invalid email or password. (401)
+unable to get an API token: Invalid email or password. (401)
+[0;31;49m[Important] YUICompressor requires java to be installed. The JAVA_HOME variable should also be set.
+[0m
+[0;31;49m[Important] YUICompressor requires java to be installed. The JAVA_HOME variable should also be set.
+[0m
+[0;97;49mStarted GET "/" at 2015-12-04 10:20:18 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 2.2ms
+
+[0m
+[0;97;49mStarted GET "/" at 2015-12-04 10:20:19 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 0.9ms
+
+[0m
+* Reloaded "pages", "snippets" at 2015-12-04 10:21:10 -0600
+[0;97;49mStarted GET "/" at 2015-12-04 10:21:13 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 0.9ms
+
+[0m
+* Reloaded "pages", "snippets" at 2015-12-04 10:21:43 -0600
+* Reloaded "pages", "snippets" at 2015-12-04 10:21:43 -0600
+[0;97;49mStarted GET "/" at 2015-12-04 10:21:45 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 1.1ms
+
+[0m
+* Reloaded "pages", "snippets" at 2015-12-04 10:21:55 -0600
+* Reloaded "pages", "snippets" at 2015-12-04 10:21:55 -0600
+[0;97;49mStarted GET "/" at 2015-12-04 10:21:55 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 1.2ms
+
+[0m
+[0;97;49mStarted GET "/" at 2015-12-04 10:22:00 -0600[0m
+Detecting locale EN
+Found page "Home" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 1.2ms
+
+[0m
+>>>>>>> Stashed changes
