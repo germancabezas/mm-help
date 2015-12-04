@@ -73,3 +73,44 @@ Found page "Home" [index]
 
 [0m
 >>>>>>> Stashed changes
+* Reloaded "site", "content_types", "pages", "snippets", "content_entries", "translations" at 2015-12-04 11:22:13 -0600
+* Reloaded "site", "content_types", "pages", "snippets", "content_entries", "translations" at 2015-12-04 11:22:36 -0600
+[0;31;49m[Important] YUICompressor requires java to be installed. The JAVA_HOME variable should also be set.
+[0m
+[0;31;49m[Important] YUICompressor requires java to be installed. The JAVA_HOME variable should also be set.
+[0m
+[0;97;49mStarted GET "/getting-started" at 2015-12-04 11:41:12 -0600[0m
+Detecting locale EN
+Found page "Getting started" [getting-started]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 24.2ms
+
+[0m
+[0;97;49mStarted GET "/guide" at 2015-12-04 11:41:13 -0600[0m
+Detecting locale EN
+Found page "Guide" [guide]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 2.4ms
+
+[0m
+[0;97;49mStarted GET "/" at 2015-12-04 11:41:14 -0600[0m
+Detecting locale EN
+Found page "Home page" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 2.3ms
+
+[0m
+[0;97;49mStarted GET "/" at 2015-12-04 13:59:31 -0600[0m
+Detecting locale EN
+Found page "Home page" [index]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 13.3ms
+
+[0m
+[0;97;49mStarted GET "/faqs" at 2015-12-04 13:59:34 -0600[0m
+Detecting locale EN
+Found page "Faqs" [faqs]
+  Rendered liquid page template
+[0;32;49mCompleted 200 OK in 2.2ms
+
+[0m
