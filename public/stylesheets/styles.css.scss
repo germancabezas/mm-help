@@ -1,0 +1,45 @@
+.navigation-wrapper:after {
+  content: "";
+  background-color: #113b56;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+}
+
+.navbar-mm {
+  background-color: #113b56;
+  height: 60px;
+  border: none;
+}
+
+.navbar-mm .nav {
+
+  li a {
+    color: #eee;
+    line-height: 28px;
+    padding: 16px 25px;
+  }
+}
+
+.navbar-mm .nav li a:hover {
+  color: white;
+}
+
+.navbar-default .navbar-nav > 
+.active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #0D2C41;
+}
+
+.navigation-wrapper .input-group {
+  padding: 10px 0;
+}
+
+.search-box {
+  height: 33px;
+}

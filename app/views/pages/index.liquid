@@ -41,18 +41,10 @@ published: true
   </head>
   <body class="page-{{ page.slug }}">
     <div class="container">
-      <!-- Site Title -->
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <img src="{{ 'mm-web-logo.jpg' | theme_image_url | resize: '150x' }}" alt="Mastery Manager Logo" />  
-          <!-- <h1>{{ site.name }}</h1> -->
-        </div>
-      </div>
-
       <!-- Site Navigation -->
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <nav class="navbar navbar-default" role="navigation">
+      <div class="row navigation-wrapper">
+        <div class="col-md-8">
+          <nav class="navbar navbar-default navbar-mm" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
@@ -65,13 +57,23 @@ published: true
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="main-nav">
               <ul class="nav navbar-nav">
-                <li {% if page.slug == "index" %}class="active"{% endif %}>
-                  <a href="/">Home</a>
+                <li>
+                  <a href="/">
+                    <img src="{{ 'mm-web-logo.png' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />  
+                  </a>
                 </li>
                 {% nav "site", no_wrapper: true, active_class: "active" %}
               </ul>
             </div>
           </nav>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group">
+            <input type="text" class="form-control search-box" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Search</button>
+            </span>
+          </div><!-- /input-group -->
         </div>
       </div>
 
