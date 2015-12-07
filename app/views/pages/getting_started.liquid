@@ -25,15 +25,16 @@ published: true
 {% extends parent %}
 
 {% block main %}
-
-  <p>Getting Started</p>
-  <div id="side-nav">
-    <ul>
-      <!-- <li {% if page.slug == "index" %}class="active"{% endif %}>
-        <a href="/">Home</a>
-      </li> -->
-      {% nav 'page', depth: 1, no_wrapper: false, exclude: nil, icon: false %}
-    </ul>
+  <div class="row">
+    <div class="col-md-8">
+      {% editable_text "content", rows: 20 %}
+        <p>Edit</p>
+      {% endeditable_text %}
+    </div>
+    <div class="col-md-4">
+      <div class="side-nav">
+        {% nav 'page', depth: 1, no_wrapper: false, exclude: nil, active_class: "active" %}
+      </div>
+    </div>
   </div>
-
 {% endblock %}

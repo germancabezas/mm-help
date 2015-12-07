@@ -75,7 +75,7 @@ $light-blue: #30aae3;
 }
 
 .side-nav {
-  border: 1px solid $light-gray;
+  /*border: 1px solid $light-gray;*/
   ul {
     padding-left: 0;
 
@@ -83,10 +83,12 @@ $light-blue: #30aae3;
 
       list-style: none;
       a {
-        padding: 10px;
+        padding: 5px 10px;
         display: block;
         color: $mid-gray;
-        border-bottom: 1px solid $light-gray;
+        /*border-bottom: 1px solid $light-gray;*/
+        text-transform: uppercase;
+
 
         &:hover {
           color: $dark-gray;
@@ -94,6 +96,17 @@ $light-blue: #30aae3;
         };
 
       }
+    }
+  }
+
+  .active {
+    a { 
+      font-weight: bold;
+      color: $light-blue;
+
+      &:hover {
+        color: $light-blue;        
+      };
     }
   }
 }

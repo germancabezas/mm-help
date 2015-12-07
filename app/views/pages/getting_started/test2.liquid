@@ -25,26 +25,19 @@ published: true
 {% extends parent %}
 
 {% block main %}
-
-  <p>test</p>
-  {% editable_text "about_body", rows: 20 %}
-                    <h1> Editable </h1>
-                    <p>
-                      Thanks for visiting Wisdom for Wanders!
-                      This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
-                      The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
-                    </p>
-                    <p>
-                      I hope you enjoy the site and bon voyage!
-                    </p>
-                {% endeditable_text %}
-    <div id="side-nav">
-    <ul>
-      <!-- <li {% if page.slug == "index" %}class="active"{% endif %}>
-        <a href="/">Home</a>
-      </li> -->
-      {% nav 'parent', depth: 1, no_wrapper: false, exclude: nil, icon: false %}
-    </ul>
+  <div class="row">
+    <div class="col-md-8">
+      {% editable_text "content", rows: 20 %}
+        <p>Edit</p>
+      {% endeditable_text %}
+    </div>
+    <div class="col-md-4">
+      <div class="side-nav">
+          <!-- <li {% if page.slug == "index" %}class="active"{% endif %}>
+            <a href="/">Home</a>
+          </li> -->
+        {% nav 'parent', depth: 1, no_wrapper: false, exclude: nil, icon: false, active_class: "active" %}
+      </div>
+    </div>
   </div>
-
 {% endblock %}
