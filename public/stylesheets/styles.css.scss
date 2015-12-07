@@ -1,3 +1,18 @@
+/* === BRAND COLORS === */
+
+$blue: #113b56;
+$white: #ffffff;
+$yellow: #e8ac1c;
+$green: #2bae67;
+$dark-gray: #424a53;
+$mid-gray: #565d66;
+$light-gray: #AAB2BB;
+$red: #e95747;
+$purple: #653e92;
+$light-blue: #30aae3;
+
+
+
 .navigation-wrapper:after {
   content: "";
   background-color: #113b56;
@@ -11,7 +26,6 @@
 
 .navbar-mm {
   background-color: #113b56;
-  height: 60px;
   border: none;
 }
 
@@ -24,9 +38,21 @@
   }
 }
 
+.collapse.navbar-collapse, .navbar-nav{
+  background: $blue;
+  overflow: visible;
+}
+
 .navbar-mm .nav li a:hover {
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .navbar-form.navbar-left {
+    float: none!important;
+  }
+}
+
 
 .navbar-default .navbar-nav > 
 .active > a, 
@@ -40,6 +66,34 @@
   padding: 10px 0;
 }
 
+.nav-logo {
+  line-height: 2em;
+}
+
 .search-box {
   height: 33px;
+}
+
+.side-nav {
+  border: 1px solid $light-gray;
+  ul {
+    padding-left: 0;
+
+    li {
+
+      list-style: none;
+      a {
+        padding: 10px;
+        display: block;
+        color: $mid-gray;
+        border-bottom: 1px solid $light-gray;
+
+        &:hover {
+          color: $dark-gray;
+          text-decoration: none;
+        };
+
+      }
+    }
+  }
 }
