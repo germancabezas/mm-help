@@ -35,6 +35,7 @@ published: true
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/samples/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/samples/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/samples/apple-touch-icon-precomposed.png">
+    <link href='https://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
 
     {% inline_editor %}
 
@@ -72,24 +73,70 @@ published: true
         </nav>
       </div>
     </div>
+      {% if page.title == 'Home' %}
+      <div class="home-message">
+        <h1>Welcome to Mastery Manager Documentation Center</h1>
+      </div>
+      {% else %}
+        <div class="container page-title">
+          <h2>{{ page.title }}</h2>
+        </div>
+      {% endif %}
     <div class="container page-wrapper"> 
       <!-- Page Content -->
       <div class="row">
-          <h2 class="page-title">{{ page.title }}</h2>
         {% block 'main' %}
-          <div class="col-md-9">
+          <div class="col-md-9 blocks">
             <div class="row">
-              <div class="col-md-6">
-              Getting Started
+              <div class="col-md-6 home-block well">
+                <h3>Getting Started</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'getting-started.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
-              <div class="col-md-6">
-                Users Guide
+              <div class="col-md-6 home-block well">
+                <h3>Users Guide</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'user-guide.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
-              <div class="col-md-6">
-                FAQs
+              <div class="col-md-6 home-block well">
+                <h3>FAQs</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'faqs.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
-              <div class="col-md-6">
-                Training
+              <div class="col-md-6 home-block well">
+                <h3>Videos</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'videos.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
+              </div>
+              <div class="col-md-6 home-block well">
+                <h3>Training</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'training.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
             </div>
           </div>
@@ -100,6 +147,10 @@ published: true
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="footer">
+       footer
     </div>
 
     <!-- Javascripts -->

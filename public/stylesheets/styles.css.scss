@@ -12,6 +12,17 @@ $purple: #653e92;
 $light-blue: #30aae3;
 
 
+/*  STYLES */
+
+body {
+  color: $mid-gray;
+}
+
+h1, h2, h3 {
+  font-family: 'lusitana', serif;
+  font-weight: normal;
+  color: $blue;
+}
 
 .navigation-wrapper:after {
   content: "";
@@ -27,6 +38,7 @@ $light-blue: #30aae3;
 .navbar-mm {
   background-color: #113b56;
   border: none;
+  margin-bottom: 0;
 }
 
 .navbar-mm .nav {
@@ -75,19 +87,19 @@ $light-blue: #30aae3;
 }
 
 .page-title {
-  /*border-bottom: 1px solid lighten($light-gray, 15%);*/
-/*  padding-bottom: 20px;
-  margin-bottom: 30px;*/
+  margin-bottom: 30px;
   margin-top: 0px;
 }
 
 .page-wrapper {
-  padding-top: 10px;
+  padding-top: 50px;
+  padding-bottom: 200px;
 }
 
 .side-nav {
   border-left: 1px solid lighten($light-gray, 15%);
   padding: 0 20px 10px; 
+  margin-top: 20px;
 
   ul {
     padding-left: 0;
@@ -98,7 +110,7 @@ $light-blue: #30aae3;
       a {
         padding: 5px 10px;
         display: block;
-        color: $light-gray;
+        color: darken($light-gray, 15%);
         text-transform: uppercase;
         font-weight: bold;
 
@@ -127,4 +139,56 @@ $light-blue: #30aae3;
       color: $dark-gray;
     }
   }
+}
+
+.home-message {
+  background: $green;
+  text-align: center;
+  min-height: 150px;
+  position: relative;
+  padding-top: 50px;
+
+  h1 {
+    color: white;
+    /*line-height: 4em;*/
+    margin-top: 0;
+  }
+}
+
+.blocks {
+  /*padding: 0 5em 0 0;*/
+  box-sizing: border-box;
+}
+
+.home-block.well {
+  background: none!important;
+  border: none;
+}
+
+/* BUTTONS */
+
+
+.btn-primary {
+  background: $blue;
+}
+.btn-info {
+  background: $light-blue;
+}
+
+.btn-success {
+  background: $light-blue;
+}
+
+.btn-warning {
+  background: $yellow;
+}
+
+.footer {
+  background: $mid-gray;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
