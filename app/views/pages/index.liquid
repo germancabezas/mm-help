@@ -54,7 +54,7 @@ published: true
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="/">
-                <img src="{{ 'mm-web-logo.png' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />  
+                <img src="{{ 'mm-web-logo.png' | theme_image_url | resize: '250x' }}" alt="Mastery Manager Logo" />  
               </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,7 +75,9 @@ published: true
     </div>
       {% if page.title == 'Home' %}
       <div class="home-message">
-        <h1>Welcome to Mastery Manager Documentation Center</h1>
+        <div class="container">
+          <h1>Welcome to the documentation center</h1>
+        </div>
       </div>
       {% else %}
         <div class="container page-title">

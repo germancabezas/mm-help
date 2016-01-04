@@ -24,6 +24,10 @@ h1, h2, h3 {
   color: $blue;
 }
 
+.navbar-brand {
+  padding: 10px;
+}
+
 .navigation-wrapper:after {
   content: "";
   background-color: #113b56;
@@ -144,7 +148,7 @@ h1, h2, h3 {
 .home-message {
   background: $green;
   text-align: center;
-  min-height: 150px;
+  min-height: 140px;
   position: relative;
   padding-top: 50px;
 
@@ -152,6 +156,7 @@ h1, h2, h3 {
     color: white;
     /*line-height: 4em;*/
     margin-top: 0;
+    text-align: left;
   }
 }
 
