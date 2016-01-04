@@ -25,7 +25,9 @@ published: true
 {% extends parent %}
 
 {% block main %}
-
-  <p>faqs</p>
-
+    <div class="col-md-9">
+      {% editable_text "content", rows: 20 %}
+        <p>Edit</p>
+      {% endeditable_text %}
+    </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 ---
-title: Home page
+title: Home
 published: true
 ---
 <!DOCTYPE html>
@@ -35,74 +35,124 @@ published: true
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/samples/apple-touch-icon-114x114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/samples/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/samples/apple-touch-icon-precomposed.png">
+    <link href='https://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet' type='text/css'>
 
     {% inline_editor %}
 
   </head>
   <body class="page-{{ page.slug }}">
     <div class="container">
-      <!-- Site Title -->
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <img src="{{ 'mm-web-logo.jpg' | theme_image_url | resize: '150x' }}" alt="Mastery Manager Logo" />  
-          <!-- <h1>{{ site.name }}</h1> -->
-        </div>
-      </div>
-
-      <!-- Site Navigation -->
-      <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <nav class="navbar navbar-default" role="navigation">
+      <div class="row navigation-wrapper">
+        <nav class="navbar navbar-default navbar-mm">
+          <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
+              <a class="navbar-brand" href="/">
+                <img src="{{ 'mm-web-logo.png' | theme_image_url | resize: '250x' }}" alt="Mastery Manager Logo" />  
+              </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="main-nav">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li {% if page.slug == "index" %}class="active"{% endif %}>
-                  <a href="/">Home</a>
-                </li>
                 {% nav "site", no_wrapper: true, active_class: "active" %}
               </ul>
-            </div>
-          </nav>
+              <form class="navbar-form navbar-left pull-right" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Search</button>
+              </form>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </div>
+    </div>
+      {% if page.title == 'Home' %}
+      <div class="home-message">
+        <div class="container">
+          <h1>Welcome to the documentation center</h1>
         </div>
       </div>
-
+      {% else %}
+        <div class="container page-title">
+          <h2>{{ page.title }}</h2>
+        </div>
+      {% endif %}
+    <div class="container page-wrapper"> 
       <!-- Page Content -->
       <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <h2>{{ page.title }}</h2>
-            {% block 'main' %}
-              <div>
-                <h1> Non Editable </h1>
-                <p>
-                    Thank you for visiting Wisdom for Wanderers! This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever. The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
-                </p>
+        {% block 'main' %}
+          <div class="col-md-9 blocks">
+            <div class="row">
+              <div class="col-md-6 home-block well">
+                <h3>Getting Started</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'getting-started.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
-              <div>
-                {% editable_text "about_body", rows: 20 %}
-                    <h1> Editable </h1>
-                    <p>
-                      Thanks for visiting Wisdom for Wanders!
-                      This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
-                      The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
-                    </p>
-                    <p>
-                      I hope you enjoy the site and bon voyage!
-                    </p>
-                {% endeditable_text %}
-
+              <div class="col-md-6 home-block well">
+                <h3>Users Guide</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'user-guide.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
               </div>
-          {% endblock %}
+              <div class="col-md-6 home-block well">
+                <h3>FAQs</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'faqs.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
+              </div>
+              <div class="col-md-6 home-block well">
+                <h3>Videos</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'videos.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
+              </div>
+              <div class="col-md-6 home-block well">
+                <h3>Training</h3>
+                <div class="col-md-4">
+                  <img src="{{ 'training.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
+                </div>
+                <div class="col-md-8">
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  <button class="btn btn-info"> Get Started ></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+        <div class="col-md-3">
+          <div class="side-nav">
+            {% nav 'site', depth: 5, no_wrapper: false, exclude: nil, icon: false, active_class: "active" %}
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="footer">
+       footer
     </div>
 
     <!-- Javascripts -->
