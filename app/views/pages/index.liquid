@@ -62,11 +62,16 @@ published: true
               <ul class="nav navbar-nav">
                 {% nav "site", no_wrapper: true, active_class: "active" %}
               </ul>
-              <form class="navbar-form navbar-left pull-right" role="search">
+              <!-- <form class="navbar-form navbar-left pull-right" role="search">
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Search">
                 </div>
                 <button type="submit" class="btn btn-default">Search</button>
+              </form> -->
+              <form action="{% path_to search %}" method="GET">
+                <label for="search">Search</label>
+                <input type="text" name="search" id="search">
+                <input type="submit" value="Search">
               </form>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -96,7 +101,9 @@ published: true
                   <img src="{{ 'getting-started.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
                 </div>
                 <div class="col-md-8">
-                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                  {% editable_text "content", rows: 20 %}
+                    <p>Edit</p>
+                  {% endeditable_text %}
                   <button class="btn btn-info"> Get Started ></button>
                 </div>
               </div>
@@ -106,7 +113,9 @@ published: true
                   <img src="{{ 'user-guide.jpg' | theme_image_url | resize: '100x' }}" alt="Mastery Manager Logo" />
                 </div>
                 <div class="col-md-8">
+                {% editable_text "content-2", rows: 20 %}
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. </p>
+                {% endeditable_text %}
                   <button class="btn btn-info"> Get Started ></button>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 ---
-title: Guide
-searchable: true
+title: Search
+handle: search
+slug: search
 
 # true if the page is included in the menu
 listed: true
@@ -26,9 +27,11 @@ published: true
 {% extends parent %}
 
 {% block main %}
-    <div class="col-md-9">
-      {% editable_text "content", rows: 20 %}
-        <p>Edit</p>
-      {% endeditable_text %}
-    </div>
+
+
+{% for result in site.search %}
+  <li><a href="/{{result.slug}}">{{ result.title }}</a></li>
+{% endfor %}
+
+
 {% endblock %}

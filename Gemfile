@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'locomotivecms_wagon', '1.5.8'
+# gem 'locomotivecms-search-wagon', '~> 0.3.5'
+# gem 'locomotivecms-search', '>= 0.3.5', require: 'locomotive/search/mongoid'
 
 group :development do
   # Mac OS X
   gem 'rb-fsevent', '~> 0.9.1', require: RUBY_PLATFORM.include?('darwin') && 'rb-fsevent'
+  
 
   # Unix
   gem 'therubyracer', require: 'v8', platforms: :ruby unless RUBY_PLATFORM.include?('darwin')
